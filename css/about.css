@@ -1,0 +1,104 @@
+.body {
+    background-color: #112e42;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+.nav-bar{
+    color:lightgray;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 300ms ease-in-out;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin: 0 30px;
+    transition: 0.3s;
+}
+
+.aboutHeader {
+    color: white;
+    font-size: 35px;
+    display: flex;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.welcome {
+    margin: 10px 0 20px 10px;
+    font-size: 30px;
+}
+
+.history {
+    margin: 10px 0 30px 10px;
+    font-size: 25px;
+}
+
+.description{
+    display: flex;
+    margin-top: 10px;
+    text-indent: 20px;
+    font-size: 20px;
+}
+
+.content {
+    color: white;
+}
+
+.members {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color: white;
+}
+
+.member {
+    text-align: center;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.hooper {
+    background-image: url("images/ianhooper.jpg");
+    padding: 10px 10px;
+    width: 400px;
+    height: 400px;    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.claudio {
+    background-image: url("images/claudiodonzelli.jpg");
+    padding: 10px 10px;
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.craig {
+    background-image: url("images/craigsaunders.jpg");
+    padding: 10px 10px;
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}

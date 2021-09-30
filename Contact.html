@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+</head>
+<body class="body">
+    <nav class="nav-bar">
+
+        
+        <a href="Homepage.html">Home</a>
+        <a href="About Us.html">About</a>
+        <a href="Concerts.html">Concerts</a>
+        <a href="Albums.html">Albums</a>
+        <a href="Contact.html">Contact</a>
+        
+
+    </nav>
+    <div class="contact-header">
+
+        <h1>Contact Us</h1>
+
+    </div>
+
+    <form class="contact-form" action="contact.php" method="post">
+        <div class="contact-form-element">
+            <label class="contact-form-label">Name</label>
+            <input class="contact-form-input" type="text" placeholder="John Doe">
+        </div>
+
+        <div class="contact-form-element">
+            <label class="contact-form-label">Email address</label>
+            <input class="contact-form-input" type="email" name="email" placeholder="JohnDoe@mail.com">
+        </div>
+
+        <div class="contact-form-element">
+            <label class="contact-form-label">Gender</label>
+            <div class="radio">
+                Male<input type="radio" name="gender" value="Male">
+                Female<input type="radio" name="gender" value="Female">
+                Other<input type="radio" name="gender" value="Other">
+            </div>
+        </div>
+
+        <div class="contact-form-element">
+            <label class="contact-form-label">Birthday</label>
+            <input class="contact-form-input" type="date" value="Birthday">
+        </div>
+
+        <div class="contact-form-element">
+            <label class="contact-form-label">Favourite album</label>
+            <select class="contact-form-input" name="favalbum" placeholder="Select an album">
+                <option value="None">None</option>
+                <option value="Howl">Howl</option>
+                <option value="Dreamers">Dreamers</option>
+                <option value="Storm">Storm EP</option>
+                <option value="Driftwood">Driftwood Seat EP</option>
+                <option value="Thinking">Tell Me What You're Thinking EP</option>
+                <option value="Things">All Things Go</option>
+                <option value="Mexico">Mexico</option>
+            </select>
+        </div>
+            <div class="radio">
+                Would you like to receive news about tours & events?<input type="checkbox">
+            </div>
+            <div class="submit-btn">
+                <button type="submit" name="submit" formtarget="_blank">Submit</button>
+            </div>
+    </form>
+</body>
+</html>

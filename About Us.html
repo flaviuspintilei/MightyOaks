@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/about.css">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+</head>
+<body class="body">
+
+    <nav class="nav-bar">
+        
+        <a href="Homepage.html">Home</a>
+        <a href="About Us.html">About</a>
+        <a href="Concerts.html">Concerts</a>
+        <a href="Albums.html">Albums</a>
+        <a href="Contact.html">Contact</a>
+        
+    </nav>
+
+    <div class="aboutHeader">
+        
+        <h1>About Us</h1>
+    
+    </div>
+    
+    <div class="content">
+        <h2 class="welcome">Welcome!</h2>
+            <h3 class="history">A brief history.</h3>
+                <div class="description"> Mighty Oaks was formed in early 2010 by instrumentalists and vocalists Ian Hooper (United States), Claudio Donzelli (Italy), and Craig Saunders (United Kingdom).</div>
+                <div class="description"> Hooper had moved to Hamburg after college some time before, and had befriended bassist Saunders when both were working on solo material as singer-songwriters.</div>
+                <div class="description"> Several months later they met Donzelli at a small acoustic festival, and kept in touch afterwards. </div>
+                <div class="description"> Several months later they met Donzelli at a small acoustic festival, and kept in touch afterwards. </div>
+                <div class="description"> All three members had an interest in indie rock and folk rock, and together began focusing on guitar and instruments such as mandolin.</div>
+                <div class="description"> The group self-released an EP on March 21, 2011, recording it themselves in Donzelli's apartment. Though never officially released on a label, the EP garnered several hundred thousand hits on SoundCloud.</div>
+
+    </div>
+    
+    <div class="members">
+        
+        <p class="member">Ian Hooper <img class="hooper" src="images/ianhooper.jpg"></p>
+        <p class="member"><img class="claudio" src="images/claudiodonzelli.jpg"> Claudio Donzelli</p>
+        <p class="member">Craig Saunders <img class="craig" src="images/craigsaunders.jpg"></p>
+          
+    </div>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var navbar = document.querySelector("navbar");
+            navbar.classList.toggle('sticky', window.scrollY > 0);
+        })
+    </script>
+</body>
+</html>

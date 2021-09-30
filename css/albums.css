@@ -1,0 +1,170 @@
+.body {
+    background-color: #112e42;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.albums-header{
+    margin-top: 5px;
+    margin-left: 10px;
+    color: white;
+    font-size: 35px;
+    display: flex;
+}
+
+.nav-bar {
+    color:lightgray;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 300ms ease-in-out;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin: 0 30px;
+}
+
+.albums{
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+p{
+    text-align: center;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.howl{
+    background-image: url("images/howl.jpg");
+    padding: 10px 0;
+    display: block;
+    
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.dreamers{
+    background-image: url("images/dreamers.jpg");
+    padding: 10px 0;
+    display: flex;
+    
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.storm{
+    background-image: url("images/storm.jpg");
+    padding: 10px 0;
+    display: flex;
+    
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.driftwood{
+    background-image: url("images/driftwood.jpg");
+    padding: 10px 0;
+    display: flex;
+    
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.thinking{
+    background-image: url("images/thinking.jpg");
+    padding: 10px 0;
+    display: flex;
+    
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}  
+
+.things{
+    background-image: url("images/things.jpg");
+    padding: 10px 0;
+    display: flex;
+    
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.mexico{
+    background-image: url("images/mexico.jpg");
+    padding: 10px 0;
+    display: flex;
+    
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.wrapper{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: gray;
+}
+
+.media{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.albums a {
+    color: white;
+    text-decoration: none;
+}
+
+.media a{
+    color: gray;
+}
+
+.media, .albums a:hover {
+    text-decoration: underline;
+}
+
+
+
+

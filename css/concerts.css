@@ -1,0 +1,91 @@
+.body {
+    background-color: #112e42;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.nav-bar{
+    color:lightgray;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 300ms ease-in-out;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin: 0 30px;
+}
+
+.concertsHeader {
+    color: white;
+    font-size: 35px;
+    display: flex;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.caption{
+    font-size: 40px;
+    padding-bottom: 40px;
+    padding-top: 50px;
+    width: 300px;
+    text-align: left;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-table{
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+tr:hover {
+    background-color: #5F9EA0;
+}
+
+.location, .date {
+    text-align: center;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-header-row {
+    text-align: center;
+    border-collapse: collapse;
+    color: white;
+    height: 30px;
+    font-size: 30px;
+    padding-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
