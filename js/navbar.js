@@ -24,11 +24,12 @@ dropdownContent.addEventListener("mouseout", () => {
     dropdownContent.classList.remove("display-block");
 });
 
-document.getElementById("historyMenu").addEventListener('click', historyFunction);
+var historyMenu = document.querySelector(".history-menu");
 
-function historyFunction() {
-    document.getElementById("jumpToTheContent").scrollIntoView({behavior: 'smooth'});
-}
+historyMenu.addEventListener("click", historyFunction => {
+        document.getElementById("#jumpToTheContent").scrollIntoView({behavior: 'smooth'});
+});
+
 
 function membersFunction() {
     window.location.hash = "jumpToTheMembers";

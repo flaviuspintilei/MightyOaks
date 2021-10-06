@@ -5,36 +5,6 @@
     margin: 0;
 }
 
-
-.nav-bar{
-    color:lightgray;
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    transition: all 300ms ease-in-out;
-}
-
-.nav-bar a{
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    margin: 0 30px;
-    transition: 0.3s;
-}
-
-.aboutHeader {
-    color: white;
-    font-size: 35px;
-    display: flex;
-    margin-top: 5px;
-    margin-left: 10px;
-}
-
 .welcome {
     margin: 10px 0 20px 10px;
     font-size: 30px;
@@ -48,36 +18,39 @@
 .description{
     display: flex;
     margin-top: 10px;
-    text-indent: 20px;
+    margin-left: 10px;
     font-size: 20px;
 }
 
 .content {
     color: white;
+    margin-top: 100px;
 }
 
 .members {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-content: center;
     color: white;
+    margin: 100px 40px 20px 40px;
 }
 
 .member {
     text-align: center;
     display: flex;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 50px;
+    font-size: 30px;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .hooper {
     background-image: url("images/ianhooper.jpg");
     padding: 10px 10px;
-    width: 400px;
-    height: 400px;    
+    width: 300px;
+    height: 300px;    
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -86,8 +59,8 @@
 .claudio {
     background-image: url("images/claudiodonzelli.jpg");
     padding: 10px 10px;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -96,8 +69,8 @@
 .craig {
     background-image: url("images/craigsaunders.jpg");
     padding: 10px 10px;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
