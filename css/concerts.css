@@ -5,14 +5,6 @@
     margin: 0;
 }
 
-.concertsHeader {
-    color: white;
-    font-size: 35px;
-    display: flex;
-    margin-top: 5px;
-    margin-left: 10px;
-}
-
 .caption{
     font-size: 40px;
     padding-bottom: 40px;
@@ -42,7 +34,7 @@ tr:hover {
 .location, .date {
     text-align: center;
     height: 70px;
-    width: 300px;
+    width: 400px;
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -59,8 +51,15 @@ tr:hover {
     padding-bottom: 10px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.location-header {
+    display: flex;
+}
+
+.date-header {
+    display: flex;
 }
 
 .table-row {
@@ -69,4 +68,63 @@ tr:hover {
     justify-content: center;
     align-items: center;
     font-size: 25px;
+}
+
+.tickets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background-color: #112e42;
+    color: gray; 
+    font-size: 50px;
+    cursor: pointer; 
+    margin-right: 20px;
+    border: none;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.tickets:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.tickets:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.days { 
+    margin-right: 25px;
+}
+
+.date-and-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-and-time:hover {
+    background-color: #112e42;
+}
+
+.location-header { 
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
 }

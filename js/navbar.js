@@ -1,6 +1,5 @@
 window.addEventListener("scroll", function () {
     var navbar = document.querySelector(".nav-bar");
-    console.log(navbar);
     navbar.classList.toggle('sticky', window.scrollY > 0);
 })
 
@@ -24,16 +23,26 @@ dropdownContent.addEventListener("mouseout", () => {
     dropdownContent.classList.remove("display-block");
 });
 
-var historyMenu = document.querySelector(".history-menu");
+var search = window.location.href;
 
-historyMenu.addEventListener("click", historyFunction => {
-        document.getElementById("#jumpToTheContent").scrollIntoView({behavior: 'smooth'});
-});
+if(search.includes("jumpHistory")){
+    let history = document.getElementById("jumpToTheContent")
 
-
-function membersFunction() {
-    window.location.hash = "jumpToTheMembers";
+    if(history){
+        document.getElementById("jumpToTheContent").scrollIntoView({behavior: "smooth"});
+    }
 }
+
+if(search.includes("jumpMembers")){
+
+    let members = document.getElementById("jumpToTheMembers")
+
+    if(members){
+        document.getElementById("jumpToTheMembers").scrollIntoView();
+    }
+}
+
+
 
 
 
