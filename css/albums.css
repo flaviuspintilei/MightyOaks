@@ -1,33 +1,36 @@
-.body {
+body {
     background-color: #112e42;
     display: flex;
     flex-direction: column;
     margin: 0;
+    align-items: center;
+}
+
+html,
+body{
+    height:100%;
 }
 
 .albums{
     margin: 200px 10px 0 10px;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between; 
-    align-items: center;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
 }
 
 p{
     text-align: center;
-    display: flex;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
-    align-items: center;
-    flex-direction: column;
 }
 
 .howl{
     background-image: url("images/howl.jpg");
     padding: 10px 0;
-    display: block;
-    
+    position: relative;
+    display: inline-block;
     width: 150px;
     height: 150px;
     background-repeat: no-repeat;
@@ -137,5 +140,38 @@ p{
     text-decoration: underline;
 }
 
+.accordion {
+    background-color: #112e42;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: auto;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.active, .accordion:hover {
+    background-color: #ccc;
+}
 
+.dropdown-albums-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    color: black;
+}
+
+.howlTitle {
+    font-size: 20px;
+    color: white;
+}
+
+.wrapper{
+    position:fixed;
+    bottom:0;
+}
