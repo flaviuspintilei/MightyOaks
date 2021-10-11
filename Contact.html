@@ -30,12 +30,12 @@
     <form class="contact-form" action="contact.php" method="post">
         <div class="contact-form-element">
             <label class="contact-form-label">Name</label>
-            <input class="contact-form-input" type="text" placeholder="John Doe">
+            <input class="contact-form-input" type="text" placeholder="John Doe" required>
         </div>
 
         <div class="contact-form-element">
             <label class="contact-form-label">Email address</label>
-            <input class="contact-form-input" type="email" name="email" placeholder="JohnDoe@mail.com">
+            <input class="contact-form-input" type="email" name="email" placeholder="JohnDoe@mail.com" required>
         </div>
 
         <div class="contact-form-element">
@@ -43,18 +43,18 @@
             <div class="radio">
                 Male<input type="radio" name="gender" value="Male">
                 Female<input type="radio" name="gender" value="Female">
-                Other<input type="radio" name="gender" value="Other">
+                Other<input type="radio" name="gender" value="Other" required>
             </div>
         </div>
 
         <div class="contact-form-element">
             <label class="contact-form-label">Birthday</label>
-            <input class="contact-form-input" type="date" value="Birthday">
+            <input class="contact-form-input" type="date" value="Birthday" required>
         </div>
 
         <div class="contact-form-element">
             <label class="contact-form-label">Favourite album</label>
-            <select class="contact-form-input" name="favalbum" placeholder="Select an album">
+            <select class="contact-form-input" name="favalbum" placeholder="Select an album" required>
                 <option value="None">None</option>
                 <option value="Howl">Howl</option>
                 <option value="Dreamers">Dreamers</option>
