@@ -15,8 +15,9 @@ for (let i = 0; i < ticketsList.length; i++) {
     ticketsList[i].addEventListener("click", () => {
         alert("Meet you at " + arenaList[i].innerText + ". \nYour place will be: " + place);
         const parent = ticketsList[i].parentElement;
+        console.log(ticketsList[i].innerHTML);
         parent.removeChild(ticketsList[i]);
-        parent.innerText = greeting;
+        parent.innerHTML = greeting;
     });
 }
 

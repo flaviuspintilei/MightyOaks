@@ -15,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    table-layout: fixed;
 }
 
 .my-table{
@@ -34,11 +35,18 @@ tr:hover {
 .location, .date {
     text-align: center;
     height: 70px;
-    width: 400px;
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: center;
+}
+
+.location {
+    width: 350px;
+}
+
+.date {
+    width: 150px;
 }
 
 .table-header-row {
@@ -53,14 +61,14 @@ tr:hover {
     flex-direction: row;
     justify-content: space-between;
 }
-
+/* 
 .location-header {
     display: flex;
 }
 
 .date-header {
     display: flex;
-}
+} */
 
 .table-row {
     display: flex;
@@ -68,6 +76,7 @@ tr:hover {
     justify-content: center;
     align-items: center;
     font-size: 25px;
+    width: 850px;
 }
 
 .tickets {
@@ -80,10 +89,8 @@ tr:hover {
     background-color: #112e42;
     color: gray; 
     font-size: 50px;
-    cursor: pointer; 
-    margin-right: 20px;
     border: none;
-    transition-duration: 0.4s;
+    /* transition-duration: 0.4s; */
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
@@ -110,7 +117,11 @@ tr:hover {
 }
 
 .days { 
-    margin-right: 25px;
+    /* padding-right: 50px; */
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
 }
 
 .date-and-time {
@@ -127,4 +138,11 @@ tr:hover {
     display: flex;
     text-align: center;
     justify-content: flex-start;
+}
+
+.remaining-days {
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
