@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/concertsform.css">
+
+</head>
+
+<body>
+    <nav class="nav-bar">
+
+        <a href="Homepage.html">Home</a>
+        <div class="dropdown">
+            <a id="aboutDropdown">About</a>
+            <div class="dropdown-content">
+                <a href="About Us.html?historyid=jumpHistory">History</a>
+                <a href="About Us.html?membersid=jumpMembers">Members</a>
+            </div>
+        </div>
+        <a href="Concerts.html" class="selected">Concerts</a>
+        <a href="Albums.html">Albums</a>
+        <a href="Contact.html">Contact</a>
+        <a href="ConcertsForm.html">Create</a>
+
+    </nav>
+
+    <form class="concerts-form" action="" method="post" onsubmit="submitconcert()">
+        <div class="concerts-form-element">
+            <label class="concerts-form-label">Date</label>
+            <input class="concerts-form-input" type="date" value="ConcertDate" required>
+        </div>
+        <div class="concerts-form-element">
+            <label class="concerts-form-label">City</label>
+            <input class="concerts-form-input" type="text" placeholder="City" required>
+        </div>
+        <div class="concerts-form-element">
+            <label class="concerts-form-label">Arena</label>
+            <input class="concerts-form-input" type="text" placeholder="Arena" required>
+        </div>
+        <div class="concerts-form-element">
+            <label class="concerts-form-label">Available Tickets</label>
+            <input class="concerts-form-input" type="number" placeholder="No. of Available Tickets" required>
+        </div>
+        <div class="submit-btn">
+            <button type="submit" name="submit" >Submit</button>
+        </div>
+    </form>
+    
+    <script src="../MightyOaks/js/navbar.js"></script>
+    <script src="js/concertsexpress.js"></script>
+</body>
+
+</html>

@@ -1,11 +1,11 @@
-.body {
+body {
     background-color: #112e42;
     display: flex;
     flex-direction: column;
     margin: 0;
 }
 
-.contact-form {
+.concerts-form {
     margin-top: 150px;
     color: gray;
     display: flex;
@@ -15,7 +15,7 @@
     font-size: 25px;
 }
 
-.contact-form-input {
+.concerts-form-input {
     outline: none;
     border: none;
     padding-left: 10px;
@@ -24,19 +24,12 @@
     width: 300px;
 }
 
-.contact-form-label {
+.concerts-form-label {
     width: 250px;
 }
 
-.contact-form-input:hover {
+.concerts-form-input:hover {
     box-shadow: 0 0 4px rgb(211, 211, 211);
-}
-
-.radio {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-    align-items: center;
 }
 
 .submit-btn {
@@ -48,7 +41,7 @@
     box-shadow: 0 0 4px rgb(211, 211, 211);
 }
 
-.contact-form-element {
+.concerts-form-element {
     align-items: center;
     display: flex;
     justify-content: space-between;

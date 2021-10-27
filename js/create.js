@@ -1,0 +1,1 @@
+const GetConcerts = require('./concertsexpress').GetConcerts();

@@ -54,7 +54,7 @@ app.get('/api/v1/concert/:id', (req, res) => {
     res.send(concert);
 });
 
-
+function submitconcert () {
 app.post('/api/v1/concert/create', (req, res) => {
     const { error } = validateConcert(req.body);
     if(error) return res.status(400).send(error.details[0].message)
@@ -66,7 +66,7 @@ app.post('/api/v1/concert/create', (req, res) => {
     concerts.push(concert);
     res.send(concert);
 });
-
+}
 
 app.put('/api/v1/concert/update/:id', (req, res) => {
     //Look up the concert, if not existing return 404
@@ -84,6 +84,7 @@ app.put('/api/v1/concert/update/:id', (req, res) => {
     res.send(concert);
 });
 
+
 app.delete('/api/v1/concert/delete/:id', (req, res) => {
     //Look up the course, non-existing -> return 404
     const concert = concerts.find(c => c.id === parseInt(req.params.id))
@@ -94,4 +95,6 @@ app.delete('/api/v1/concert/delete/:id', (req, res) => {
     concerts.splice(index, 1);
 
     res.send(concert);
-})
+});
+
+module.exports = submitconcert();
