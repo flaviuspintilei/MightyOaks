@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/concertsform.css">
 
+    <script src="../MightyOaks/js/navbar.js"></script>
+    <script src="js/concertsexpress.js"></script>
+    <script type="module" src="js/create.js"></script>
 </head>
 
 <body>
@@ -26,7 +29,7 @@
 
     </nav>
 
-    <form class="concerts-form" action="" method="post" onsubmit="submitconcert()">
+    <form id="myForm" class="concerts-form">
         <div class="concerts-form-element">
             <label class="concerts-form-label">Date</label>
             <input class="concerts-form-input" type="date" value="ConcertDate" required>
@@ -48,8 +51,7 @@
         </div>
     </form>
     
-    <script src="../MightyOaks/js/navbar.js"></script>
-    <script src="js/concertsexpress.js"></script>
+    
 </body>
 
 </html>

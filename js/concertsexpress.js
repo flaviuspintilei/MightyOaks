@@ -1,10 +1,10 @@
-const Joi = require("joi");
-const express = require("express");
-const { POINT_CONVERSION_UNCOMPRESSED } = require("constants");
+import Joi from "joi";
+import express, { json } from "express";
+import { POINT_CONVERSION_UNCOMPRESSED } from "constants";
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.json());
+app.use(json());
 
 app.listen(port, () => console.log(`it's alive on port ${port}`));
 
@@ -13,7 +13,7 @@ function validateConcert(concert) {
         date: Joi.string().required()
     };
 
-    return Joi.validate(concert, schema);
+    return validate(concert, schema);
 }
 
 const concerts = [
@@ -43,10 +43,11 @@ const concerts = [
     }
 ];
 
-app.get('/api/v1/concerts', (req, res) => {
-    res.status(200).send(concerts)
-});
-
+function submitconcert(){
+    app.get('/api/v1/concerts', (req, res) => {
+        res.status(200).send(concerts)
+    });
+}
 app.get('/api/v1/concert/:id', (req, res) => {
     const concert = concerts.find(c => c.id === parseInt(req.params.id))
 
@@ -54,7 +55,6 @@ app.get('/api/v1/concert/:id', (req, res) => {
     res.send(concert);
 });
 
-function submitconcert () {
 app.post('/api/v1/concert/create', (req, res) => {
     const { error } = validateConcert(req.body);
     if(error) return res.status(400).send(error.details[0].message)
@@ -66,7 +66,6 @@ app.post('/api/v1/concert/create', (req, res) => {
     concerts.push(concert);
     res.send(concert);
 });
-}
 
 app.put('/api/v1/concert/update/:id', (req, res) => {
     //Look up the concert, if not existing return 404
@@ -97,4 +96,4 @@ app.delete('/api/v1/concert/delete/:id', (req, res) => {
     res.send(concert);
 });
 
-module.exports = submitconcert();
+export default submitconcert();
