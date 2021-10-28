@@ -2,11 +2,11 @@ import Joi from "joi";
 import express, { json } from "express";
 import { POINT_CONVERSION_UNCOMPRESSED } from "constants";
 const app = express();
-const port = process.env.PORT || 3000;
+// const port = process.env.PORT || 3000;
 
 app.use(json());
 
-app.listen(port, () => console.log(`it's alive on port ${port}`));
+// app.listen(port, () => console.log(`it's alive on port ${port}`));
 
 function validateConcert(concert) {
     const schema = {
@@ -43,11 +43,10 @@ const concerts = [
     }
 ];
 
-function submitconcert(){
-    app.get('/api/v1/concerts', (req, res) => {
-        res.status(200).send(concerts)
-    });
-}
+app.get('/api/v1/concerts', (req, res) => {
+    res.status(200).send(concerts)
+});
+
 app.get('/api/v1/concert/:id', (req, res) => {
     const concert = concerts.find(c => c.id === parseInt(req.params.id))
 
@@ -95,5 +94,3 @@ app.delete('/api/v1/concert/delete/:id', (req, res) => {
 
     res.send(concert);
 });
-
-export default submitconcert();
