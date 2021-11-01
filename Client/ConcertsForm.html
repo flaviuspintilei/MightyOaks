@@ -28,7 +28,7 @@
 
     </nav>
 
-    <form id="myForm" class="concerts-form">
+    <form id="myForm" class="concerts-form" action="http://localhost:3000/api/v1/concert/create" method="post">
         <div class="concerts-form-element">
             <label class="concerts-form-label">Date</label>
             <input class="concerts-form-input" type="date" value="ConcertDate" required>
@@ -46,7 +46,7 @@
             <input class="concerts-form-input" type="number" placeholder="No. of Available Tickets" required>
         </div>
         <div class="submit-btn">
-            <button type="submit" name="submit" >Submit</button>
+            <button name="submit" type="submit" value="submit">Submit</button>
         </div>
     </form>
     
