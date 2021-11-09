@@ -11,6 +11,7 @@ var arenaList = [].slice.call(arena);
 var place = Math.floor(Math.random() * 100);
 var greeting = "Meet you there!";
 
+
 for (let i = 0; i < ticketsList.length; i++) {
     ticketsList[i].addEventListener("click", () => {
         alert("Meet you at " + arenaList[i].innerText + ". \nYour place will be: " + place);
@@ -25,9 +26,6 @@ let remainingDays = document.getElementsByClassName("remaining-days");
 let concertDates = document.getElementsByClassName("date");
 
 showDays(concertDates, remainingDays);
-
-console.log(concertDates);
-console.log(remainingDays);
 
 function showDays(eventDates, days) {
     for(let i=0; i < eventDates.length; i++){

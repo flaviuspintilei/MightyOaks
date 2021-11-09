@@ -1,9 +1,13 @@
 import Joi from "joi";
 import express, { json } from "express";
-import sql from "mssql"
+import Concert from "./mongodbconnection.js";
+import mongoose from "mongoose";
+import cors from "cors";
+
 const app = express();
 const port = 3000;
 
+app.use(cors());
 app.use(json());
 
 app.listen(port, () => console.log(`it's alive on port ${port}`));
@@ -16,58 +20,36 @@ function validateConcert(concert) {
     return validate(concert, schema);
 }
 
-app.get('/api/v1/concerts', function (req, res) {
-
-    // config database 
-    var config = {
-        user: 'DESKTOP-5O9VCTS\Flavius Pintilei',
-        server: 'DESKTOP-5O9VCTS\SQLEXPRESS', 
-        database: 'MightyOaks',
-        port: 3000
-    };
-
-    // connect to database
-    sql.connect(config, function (err) {
-
-        if (err)  {
-            console.log(err)
-            return;
-        }
-        // create Request object
-        var request = new sql.Request();
-           
-        // get the records
-        request.query('select * from Concerts', function (err, recordset) {
-            
-            if (err) console.log(err)
-
-            // send records as a response
-            res.send(recordset);
-            
-        });
+app.get('/api/v1/concerts', (req, res) => {
+    Concert.find().lean().exec(function (err, concerts) {
+        return res.end(JSON.stringify(concerts));
     });
 });
 
-
-
-// app.get('/api/v1/concert/:id', (req, res) => {
-//     const concert = concerts.find(c => c.id === parseInt(req.params.id))
-
-//     if(!concert) return res.status(404).send("The concert with the given id was not found")
-//     res.send(concert);
-// });
-
-// app.post('/api/v1/concert/create', (req, res) => {
-//     const { error } = validateConcert(req.body);
-//     if(error) return res.status(400).send(error.details[0].message)
+app.post('/api/v1/concerts/create', (req, res) => {
+    // const { error } = validateConcert(req.body);
+    // if(error) return res.status(400).send(error.details[0].message)
     
-//     const concert = {
-//         id: concerts.length + 1,
-//         date: req.body.date
-//     };
-//     concerts.push(concert);
-//     res.send(concert);
-// });
+    var concert = new Concert ({
+        _id: new mongoose.Types.ObjectId(),
+        date: req.body.date,
+        Arena: req.body.Arena,
+        City: req.body.City,
+        Capacity: req.body.Capacity,
+        AvailableTickets: req.body.AvailableTickets
+    });
+
+    console.log(concert);
+    
+    concert.save(function(err) {
+        if(err) {
+            console.log(err);
+            return ;
+        }
+    });
+
+    res.send(concert);
+});
 
 // app.put('/api/v1/concert/update/:id', (req, res) => {
 //     //Look up the concert, if not existing return 404

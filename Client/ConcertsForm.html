@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/concertsform.css">
 
     <script type="module" src="js/navbar.js"></script>
-    <script type="module" src="js/create.js"></script>
+    <script type="module" src="js/submitForm.js"></script>
 </head>
 
 <body>
@@ -28,25 +28,29 @@
 
     </nav>
 
-    <form id="myForm" class="concerts-form" action="http://localhost:3000/api/v1/concert/create" method="post">
+    <form id="myForm" class="concerts-form">
         <div class="concerts-form-element">
             <label class="concerts-form-label">Date</label>
-            <input class="concerts-form-input" type="date" value="ConcertDate" required>
+            <input class="concerts-form-input" id="concertDate" type="date" required>
         </div>
         <div class="concerts-form-element">
             <label class="concerts-form-label">City</label>
-            <input class="concerts-form-input" type="text" placeholder="City" required>
+            <input class="concerts-form-input" type="text" id="city" placeholder="City" required>
         </div>
         <div class="concerts-form-element">
             <label class="concerts-form-label">Arena</label>
-            <input class="concerts-form-input" type="text" placeholder="Arena" required>
+            <input class="concerts-form-input" type="text" id="arena" placeholder="Arena" required>
+        </div>
+        <div class="concerts-form-element">
+            <label class="concerts-form-label">Capacity</label>
+            <input class="concerts-form-input" type="number" id="capacity" placeholder="Capacity" required>
         </div>
         <div class="concerts-form-element">
             <label class="concerts-form-label">Available Tickets</label>
-            <input class="concerts-form-input" type="number" placeholder="No. of Available Tickets" required>
+            <input class="concerts-form-input" type="number" id="tickets" placeholder="No. of Available Tickets" required>
         </div>
         <div class="submit-btn">
-            <button name="submit" type="submit" value="submit">Submit</button>
+            <button id="submitBtn" name="submit" value="submit">Submit</button>
         </div>
     </form>
     
